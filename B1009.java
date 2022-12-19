@@ -15,5 +15,6 @@ public class B1009 {
             num1[i] * num2[i];
         }
         sc.close();
+        hello I am test branch;
     }
 }
