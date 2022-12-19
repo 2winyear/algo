@@ -4,15 +4,20 @@ public class B1009 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count;
-        int[] num1 = new int[1000000];
-        int[] num2 = new int[1000000];
+        int num1;
+        int num2;
+
         count = sc.nextInt();
         for (int i = 0; i < count; i++) {
-            num1[i] = sc.nextInt();
-            num2[i] = sc.nextInt();
-        }
-        for (int i = 0; i < count; i++) {
-            num1[i] * num2[i];
+            num1 = sc.nextInt();
+            num2 = sc.nextInt();
+
+            int result = 1;
+            for (int j = 0; j < num2; j++) {
+                result = (result * num1) % 10;
+            }
+            if (result == 0) result = 10;
+            System.out.println(result);
         }
         sc.close();
     }
