@@ -20,6 +20,5 @@ public class B1009 {
             System.out.println(result);
         }
         sc.close();
-        hello I am test branch;
     }
 }
