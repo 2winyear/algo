@@ -1,24 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main() {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        List<Integer> list = new ArrayList<>();
-        Random rand = new Random();
+        LinkedList<Integer> list = new LinkedList<Integer>();
         int input = sc.nextInt();
         int num;
-        for (int i = 0; i < input; i++) {
-            num = rand.nextInt(i);
-            if (num <= i) {
-                list.add(0, num);
+
+        num = sc.nextInt();
+        list.add(1);
+        for (int i = 2; i <= input; i++) {
+            num = sc.nextInt();
+            if (num == 0) {
+                list.add(i);
             }
-            else {
-                list.add(i, num);
+            if (num >= 1) {
+                list.add(list.size() - num, i);
             }
         }
-        System.out.println(list);
+
+        for (int i = 0; i < input; i++) { //리스트 출력은 0번째부터! 
+			System.out.print(list.get(i) + " ");
+		}
     }
 }
+
