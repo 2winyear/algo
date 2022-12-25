@@ -1,28 +1,21 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String args[]) {
+    static public void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        int input = sc.nextInt();
-        int num;
+        int N = sc.nextInt();
+        ArrayList<String> list = new ArrayList<String>();
 
-        num = sc.nextInt();
-        list.add(1);
-        for (int i = 2; i <= input; i++) {
-            num = sc.nextInt();
-            if (num == 0) {
-                list.add(i);
-            }
-            if (num >= 1) {
-                list.add(list.size() - num, i);
+        for (int i = 0; i < N; i++) {
+            String s = sc.next();
+            String reverse = new StringBuffer(s).reverse().toString();
+            if (list.contains(reverse) || s.equals(reverse)) {
+                System.out.println(s.length() + " " + s.charAt(s.length()/2));
+                return;
+            } else {
+                list.add(s);
             }
         }
-
-        for (int i = 0; i < input; i++) { //리스트 출력은 0번째부터! 
-			System.out.print(list.get(i) + " ");
-		}
     }
 }
-
