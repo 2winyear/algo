@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class B1009 {
+public class S1009 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count;
