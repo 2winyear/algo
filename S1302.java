@@ -28,7 +28,7 @@ public class S1302 {
             int value = ((int)val);
             max = Math.max(value, max);
         }
-        
+
         final int maxval = max;
         map.forEach((key, val) -> {
             if (val == maxval) {
