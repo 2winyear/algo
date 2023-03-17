@@ -6,6 +6,20 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "B10430",
+			"request": "launch",
+			"mainClass": "B10430",
+			"projectName": "algo_dd619621"
+		},
+		{
+			"type": "java",
+			"name": "Main",
+			"request": "launch",
+			"mainClass": "Main",
+			"projectName": "algo_dd619621"
+		},
+		{
+			"type": "java",
 			"name": "Launch S2716",
 			"request": "launch",
 			"mainClass": "S2716",
