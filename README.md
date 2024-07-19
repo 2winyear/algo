@@ -1,1 +1,1 @@
-This is a auto push repository for Programmers created with BaekjoonHub.
+This is a auto push repository created with BaekjoonHub.
